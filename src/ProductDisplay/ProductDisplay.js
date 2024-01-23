@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import "./ProductDisplay.css";
 import star_icon from "../Assets/star_icon.png";
 import star_dull_icon from "../Assets/star_dull_icon.png"
@@ -13,6 +13,10 @@ const ProductDisplay=()=>{
   const location=useLocation();
   const res=location.state&&location.state;
   console.log(res)
+
+  useEffect(()=>{
+    window.scrollTo(0,0);
+  },[]);
   return (
    <>
    <Navbar/>
